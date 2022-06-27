@@ -1,0 +1,15 @@
+{% extends 'pokedex/base.html' %}
+
+{% block content %}
+    <h1>Hello</h1>
+
+    <form method="GET">
+
+        <input type="text" name="name" placeholder="search">
+        <button type="submit">search pokemon</button>
+    </form>
+
+    {% for pokemon in list_pokemons %}
+        <p>{{ pokemon }}</p>
+    {% endfor %}
+{% endblock %}
